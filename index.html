@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RPG GAME</title>
+</head>
+<body>
+    <div id="status">
+        <div id="level">
+            <label for="status-level">LVL:</label>
+            <div id="status-level">1</div>
+        </div>
+        <div id="experience">
+            <label for="status-xp">XP:</label>
+            <div id="status-xp"></div>
+        </div>
+        <div id="tolvlup">
+            <label for="status-tolvlup">TO LVL UP:</label>
+            <div id="status-tolvlup"></div>
+        </div>
+
+        <div id="info">
+            <i class="fa-solid fa-circle-question"></i>
+        </div> 
+    </div>
+    <div id="level-progress">
+        <div id="progress-output">
+
+        </div>
+        <div id="progress-range">
+            <div id="xp-range"></div>
+
+        </div>
+        <div id="progress-btn">
+            <p id="progress-btn-2">LEVEL UP</p>
+        </div>
+    </div>
+    <div id="status-loot">
+        <div id="user-coins">
+            <i class="fa-solid fa-coins"></i>
+            <p id="coins-output">0</p>
+        </div>
+        <div id="status-shop">
+            <i class="fa-solid fa-shop"></i>
+        </div>
+        <div id="status-fight">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <div id="status-life-mana">
+            <div id="status-life">
+                
+                <div id="life-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div id="output-life">
+                    <div id="life"></div>
+                    <div id="life-percent">
+                        <p id="life-percent-output">0</p>
+                    </div>
+                </div>
+            </div>
+            <div id="status-mana">
+                <div id="mana-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div id="output-mana">
+                    <div id="mana"></div>
+                    <div id="mana-percent">
+                        <p id="mana-percent-output">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--       ENEMY       -->
+    <!--       ENEMY       -->
+                <!-- ENEMY -->
+            <!-- ENEMY -->
+        <!-- ENEMY -->
+    <!-- ENEMY -->
+    <!--       ENEMY       -->
+    <!--       ENEMY       -->
+    <div id="canvas">
+        <div id="enemy">
+            <div id="enemy-life"></div>
+            <div id="enemy-body">
+                <i class="fa-solid fa-ghost"></i>    
+            </div>
+            <div id="enemy-loot">
+                <div id="loot">
+                    <i class="fa-solid fa-coins"></i>
+                    <p id="loot-coin">0</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <!--       SHOPPING       -->
+    <!--       SHOPPING       -->
+                <!-- SHOPPING -->
+            <!-- SHOPPING -->
+        <!-- SHOPPING -->
+    <!-- SHOPPING -->
+    <!--       SHOPPING       -->
+    <!--       SHOPPING       -->
+    <div id="shopping">
+        <div id="shop-close-btn"><i class="fa-solid fa-xmark"></i></div>
+        <div id="shopping-header">
+            <i class="fa-solid fa-shop"></i>
+            <h1>Shopping</h1>
+          
+        </div>
+        <div id="shop-cart">
+            <div class="upgrades" id="upgrade-money">
+                <h3>UPGRADE MONEY</h3><i class="fa-solid fa-money-bill-wave"></i>
+                <p>Cada upgrade vai fazer com que você ganhe +5 coins por inimigo!</p>
+                
+                <h2>UPGRADE</h2>
+                
+                <i class="fa-solid fa-angles-up"></i>
+                
+                <div id="money-price">
+                    <h3>VALUE:</h3>
+                    <div class="money-price">
+                        <i class="fa-solid fa-coins"></i>
+                        
+                        <p id="money-price-output"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="upgrades" id="upgrade-2">
+
+            </div>
+            <div class="upgrades" id="upgrade-3">
+
+            </div>
+
+        </div>
+    
+    </div>
+
+
+    <!--       INFO       -->
+    <!--       INFO       -->
+                <!-- INFO -->
+            <!-- INFO -->
+        <!-- INFO -->
+    <!-- INFO -->
+    <!--       INFO       -->
+    <!--       INFO       -->
+    <div id="howtoplay">
+        <div id="howtoplay-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+       
+        <div id="howto-content">
+            <h1>How to play:</h1> <br>
+            <p>Click on the enemy to kill him (ATK: 20 / click).</p>
+            <p>(20 mana cost)</p>
+            <br>
+            <p>or mouse move on enemy (ATK: 0.1 / pixel).</p>
+            <p>(No mana cost)</p>
+            <br>
+            <br>
+            <p>Each enemy gets 50XP </p>
+            <p>and every level needs 100XP x LEVEL NUMBER to level up.</p>
+            <br>
+            <br>
+            <p>Every level up the player gains +10 MAX HEALTH and +20 MAX MANA</p>
+        
+        
+        
+        </div>
+       
+        
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

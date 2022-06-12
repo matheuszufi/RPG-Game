@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+body {
+    overflow: hidden;
+}
+
+#status {
+    display: flex;
+    width: 100vw;
+    background-color: burlywood;
+    height: 40px;
+    align-items: center;
+    margin: 0px;
+
+}
+
+#status-tolvlup{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#status-level {
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#status-xp {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+#info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+   
+}
+
+#info i {
+    font-size: 20px;
+    transition: 1s;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 0px 8px;
+}
+
+#info i:hover {
+    transform: scale(1.1);
+    border: 2px solid rgb(53, 53, 53);
+    color: rgb(255, 0, 0);
+    background-color: rgba(230, 230, 230, 0.703);
+    
+}
+#tolvlup {
+    width: 300px;
+    border: 2px solid rgb(139, 139, 139);
+    height: 30px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+#tolvlup label {
+    font-size: 10px;
+}
+
+#experience {
+    width: 150px;
+    border: 2px solid rgb(139, 139, 139);
+    height: 30px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+#level {
+    width: 100px;
+    border: 2px solid rgb(139, 139, 139);
+    height: 30px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+#level-progress {
+    width: 100vw;
+    height: 40px;
+    background-color: grey;
+    display: flex;
+    border: 1px solid black;
+    color: aliceblue;
+}
+
+#progress-output {
+    width: 80px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#progress-range {
+    width: calc(100vw - 180px);
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#xp-range {
+    background-color: green;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.533);
+    width: 1px;
+    height: 8px;
+    transition: 0.5s;
+}
+
+#progress-btn {
+    height: 100%;
+    width: 100px;
+    background-color: green;
+    color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;   
+    border: 1px solid black;
+    transition: 1s;
+}
+
+#progress-btn-2 {
+    display: none;
+    cursor: pointer;
+}
+#progress-btn:hover {
+    background-color: rgb(140, 255, 0);
+    text-shadow: 1px 1px 1px black;
+}
+
+#progress-btn:active {
+    background-color: rgb(136, 181, 80);
+}
+
+#enemy { 
+    width: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#enemy-life {
+    transition: 0.2s;
+    height: 5px;
+    background-color: green;
+    width: 100%;
+    margin: 4px;
+}
+
+#enemy-body {
+    text-align: center;
+   font-size: 50px;
+    width: 50px;
+    height: 50px;
+    color: rgba(114, 114, 114, 0.5);
+}
+
+#status-loot {
+    background-color: rgb(67, 67, 67);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+#user-coins {
+    width: 120px;
+    height: 50px;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: gold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Roboto';
+}
+
+#status-shop { 
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+#status-shop:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 0.5s ease;
+    border: 1px solid white;
+    color: white;
+}
+
+#status-shop:active {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#status-fight {
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+#status-fight:hover {
+    color: red;
+    border: 1px solid white;
+}
+
+
+
+#canvas {
+    background-color: rgba(128, 128, 128, 0.426);
+   height: calc(100vh - 140px);
+}
+
+#enemy-loot {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0.4);
+    border-radius: 8px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}
+
+#loot {
+    width: 100%;
+    height: 100%;
+    color: gold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.524);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#shopping {
+    background-color: rgb(208, 208, 208);
+    width: 100vw;
+    height: calc(100vh - 140px);
+    display: none;
+    flex-direction: column;
+    font-family: 'Josefin Sans';
+}
+
+#shop-close-btn {
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+#shop-close-btn:hover {
+    border: 1px solid red;
+    color: red;
+}
+
+#shopping-header {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-size: 32px;
+    align-items: center;
+    color: rgb(39, 99, 4);    
+}
+
+#shopping-header i {
+    color: rgba(147, 255, 94, 0.563);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    font-size: 48px;
+}
+
+#shop-cart {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.upgrades {
+    width: 180px;
+    height: 260px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.upgrades:hover h3 {
+    color: rgb(0, 118, 33);
+
+}
+.upgrades:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.upgrades:active {
+    background-color: rgba(192, 255, 143, 0.8);
+}
+
+#upgrades-error:active {
+    background-color: rgba(255, 177, 143, 0.8);
+}
+
+.upgrades p {
+ color: rgb(106, 67, 0);
+ font-size: 12px;
+ font-weight: 700;
+}
+
+.upgrades h3 {
+    color: rgba(0, 0, 0, 0.292);
+    font-size: 20px;
+    transition: 1s;
+}
+
+.upgrades h2 {
+    color: rgba(0, 0, 0, 0.572);
+ 
+}
+
+.upgrades i {
+    font-size: 44px;
+    text-shadow: 1px 1px 1px black;
+    color: green;
+}
+
+#money-price {
+ font-weight: 500;
+ color: rgba(0, 0, 0, 0.353);
+}
+
+#money-price i {
+    color: gold;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.458);
+}
+
+#status-life-mana {
+    margin-left: 5px;
+    height: 50px;
+    width: calc(100vw - 345px);
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    #status-shop {
+        width: 50px;
+    }
+    #status-fight {
+        width: 50px;
+    }
+    #user-coins {
+        width: 100px;
+        font-size: 12px;
+    }
+    #status-life-mana {
+        width: calc(100vw - 225px);
+    }
+  }
+
+
+  #status-life {
+    margin-right: 5px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  #status-mana {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  #output-life {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+  }
+
+  #output-mana {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+  }
+
+  #life {
+    background-color: green;
+
+    height: 50%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  #mana {
+    background-color: rgb(0, 0, 206);
+    transition: 0.2s ease;
+    height: 50%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  #life-percent {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  #mana-percent {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  #life-icon {
+    width: 25px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mana-icon {
+    color: rgb(20, 20, 58);
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  #howtoplay {
+    background-color: rgba(255, 142, 142, 0.408);
+    width: 100vw;
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #howtoplay-close-btn {
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+#howtoplay-close-btn:hover {
+    border: 1px solid red;
+    color: red;
+}
+
+#howto-content {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
