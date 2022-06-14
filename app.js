@@ -48,6 +48,7 @@ const howtoCloseBtn = document.getElementById('howtoplay-close-btn');
 let player = {
     level: 1,
     xp: 0,  
+    atk: 10,
     coin: 0,
     mana: 180,
     maxMana: 180,
@@ -104,6 +105,47 @@ function loadEventListeners() {
 
 }
 
+
+const power1 = document.getElementById('power-1'); 
+const power2 = document.getElementById('power-2');
+const power3 = document.getElementById('power-3');
+const power4 = document.getElementById('power-4');
+
+
+document.addEventListener('keydown', (event) => {
+   btnA = "1";
+   btnB = "2";
+   btnC = "3";
+   btnD = "4";
+
+  if(event.key === btnA) {
+    power1.style.background = "blue";
+    power2.style.background = "grey";
+    power3.style.background = "grey";
+    power4.style.background = "grey";
+  } else if (event.key === btnB) {
+    power1.style.background = "grey";
+    power2.style.background = "blue";
+    power3.style.background = "grey";
+    power4.style.background = "grey";
+  } else if (event.key === btnC) {
+    power1.style.background = "grey";
+    power2.style.background = "grey";
+    power3.style.background = "blue";
+    power4.style.background = "grey";
+  } else if (event.key === btnD) {
+    power1.style.background = "grey";
+    power2.style.background = "grey";
+    power3.style.background = "grey";
+    power4.style.background = "blue";
+  }
+
+  if (power1.style.background === "blue") {
+    player.atk += 40;
+    player.mana -= 10;
+  }
+  });
+
 function slashEnemy() {
    
     enemy.hp -= 0.1;
@@ -119,7 +161,7 @@ function slashEnemy() {
 
 function atkEnemy() {
     if (player.mana >= 20) {
-    enemy.hp -= 20;
+    enemy.hp -= player.atk;
     player.mana -= 20;
     manaPercent.innerHTML = player.mana;
     mana.style.width = ` ${(player.mana / player.maxMana ) * 100}%`;
