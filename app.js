@@ -43,7 +43,7 @@ const howToPlay = document.getElementById('howtoplay');
 const howtoCloseBtn = document.getElementById('howtoplay-close-btn');
 
 
-let randNum;
+
 
 let player = {
     level: 1,
@@ -66,6 +66,7 @@ let itemsShop = {
     money: 50,
 }
 
+let randNum;
 randomCoin(); 
 
 let toLevelUp = 100 * player.level;
